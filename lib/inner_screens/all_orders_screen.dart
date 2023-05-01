@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_admin_panel/widgets/orders_list.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +45,8 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
                       Header(
                         fct: () {
                           context.read<menu.MenuController>().controlAllOrder();
-                        }, title: 'All orders',
+                        },
+                        title: 'All orders',
                       ),
                       const SizedBox(
                         height: 20,

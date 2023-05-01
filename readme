@@ -1,1 +1,3 @@
 read me pls
+
+run: flutter run -d chrome --web-renderer html

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_admin_panel/consts/constants.dart';
 import 'package:grocery_admin_panel/widgets/header.dart';
@@ -29,7 +30,8 @@ class DashboardScreen extends StatelessWidget {
             Header(
               fct: () {
                 context.read<menu.MenuController>().controlDashboarkMenu();
-              }, title: 'Dashboard',
+              },
+              title: 'Dashboard',
             ),
             const Text('Latest products'),
             const SizedBox(
@@ -78,8 +80,7 @@ class DashboardScreen extends StatelessWidget {
                           childAspectRatio: size.width < 1400 ? 0.8 : 1.05,
                         ),
                       ),
-                      
-                      const OrdersList(),
+                      OrdersList(),
                     ],
                   ),
                 ),
